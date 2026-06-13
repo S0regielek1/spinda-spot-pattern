@@ -1,0 +1,12 @@
+[package]
+name = "spinda-count"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rayon = "1"
+xxhash-rust = { version = "0.8", features = ["xxh3"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
